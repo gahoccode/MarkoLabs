@@ -1,7 +1,7 @@
 @echo off
 echo Activating Bokehfolio virtual environment...
 
-:: Check if venv exists, if not create it
+:: Check if venv exists, if not create ittttt
 if not exist venv (
     echo Creating new virtual environment...
     python -m venv venv
