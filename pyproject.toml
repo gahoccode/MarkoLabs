@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "markolabs"
+version = "0.1.0"
+description = "A portfolio analysis and visualization tool using Bokeh and Dash"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dash = "^2.15.0"
+dash-bootstrap-components = "^1.5.0"
+plotly = "^5.19.0"
+pandas = "^2.1.0"
+numpy = "^1.24.0"
+quantstats = "^0.0.59"
+bokeh = "^3.3.4"
+python-dateutil = "^2.8.2"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.0.0"
+black = "^23.12.1"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+pytest = "^7.4.4"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+markolabs = "src.main:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=src --cov-report=term-missing"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
