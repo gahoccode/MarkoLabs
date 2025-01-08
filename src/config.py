@@ -11,7 +11,7 @@ COLORS = {
 }
 
 # File paths
-DATA_PATH = "F:/Data Science/CafeF.SolieuGD.Upto24092024/myport2.csv"
+DATA_PATH = "/app/data/myport2.csv"
 
 # Chart settings
 pio.templates.default = "plotly_white"

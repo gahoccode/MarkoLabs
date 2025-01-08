@@ -66,13 +66,13 @@ coverage.xml
 .env.*.local
 
 # Project specific
-data/
-output/
-*.csv
-*.xlsx
-*.xls
-*.pkl
-*.h5
+#data/
+#output/
+#*.csv
+#*.xlsx
+#*.xls
+#*.pkl
+#*.h5
 
 # Operating System
 .DS_Store
