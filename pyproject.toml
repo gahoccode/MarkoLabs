@@ -1,16 +1,20 @@
+[tool.poetry]
+package-mode = false
+
 [project]
 name = "markolabs"
 version = "0.1.0"
 description = "A portfolio analysis and visualization tool using Bokeh and Dash"
 authors = [{name = "Your Name", email = "your.email@example.com"}]
 readme = "README.md"
-requires-python = ">=3.9"
+packages = [{include = "src"}]
+requires-python = ">=3.9,<4.0"
 dependencies = [
     "dash==2.15.0",
     "dash-bootstrap-components==1.5.0",
     "plotly==5.19.0",
     "pandas==2.1.0",
-    "numpy==1.24.0",
+    "numpy==1.26.4",
     "quantstats==0.0.59",
     "bokeh==3.3.4",
     "python-dateutil==2.8.2",
